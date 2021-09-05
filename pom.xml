@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 	    <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
-	    <org.hibernate.version>5.2.4.Final</org.hibernate.version>
+	    <org.hibernate.version>5.2.5.Final</org.hibernate.version>
 	    <com.github.ulisesbocchio.version>3.0.4</com.github.ulisesbocchio.version>
 	    <com.github.marlonlom.timeago.version>4.0.3</com.github.marlonlom.timeago.version>
 	    <jsonwebtoken.version>0.11.2</jsonwebtoken.version>
