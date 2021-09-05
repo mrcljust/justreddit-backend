@@ -1,6 +1,7 @@
 package de.justitsolutions.justreddit.dto;
 
-import de.justitsolutions.justreddit.model.VoteType;
+import org.hibernate.validator.constraints.NotBlank;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class VoteDto {
-    private VoteType voteType;
-    private Long postId;
+public class RefreshTokenRequest {
+    @NotBlank
+    private String refreshToken;
+    private String username;
 }
