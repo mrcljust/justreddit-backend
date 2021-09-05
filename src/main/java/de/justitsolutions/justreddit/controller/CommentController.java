@@ -15,7 +15,7 @@ import de.justitsolutions.justreddit.service.CommentService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/api/comment")
+@RequestMapping("/api/comment/")
 @AllArgsConstructor
 public class CommentController {
 	private final CommentService commentService;
@@ -26,13 +26,13 @@ public class CommentController {
 		.body(commentService.save(commentDto));
 	}
 	
-	@GetMapping("/by-post/{id}")
+	@GetMapping("by-post/{id}")
 	public ResponseEntity<List<CommentDto>> getCommentsForPost(@PathVariable Long id) {
 		return ResponseEntity.status(HttpStatus.OK)
 				.body(commentService.getCommentsByPost(id));
 	}
 	
-	@GetMapping("/by-user/{username}")
+	@GetMapping("by-user/{username}")
 	public ResponseEntity<List<CommentDto>> getCommentsByUsername(@PathVariable String username) {
 		return ResponseEntity.status(HttpStatus.OK)
 				.body(commentService.getCommentsByUsername(username));
